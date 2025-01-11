@@ -1,0 +1,18 @@
+
+---
+
+```yaml
+logging:
+    level: INFO  #Logging level (INFO, DEBUG, ERROR)
+    file_path: logs/threat_detector.log  # Path to store logs
+
+database:
+    path: security.db  #SQLite database file path
+
+thresholds:
+    max_failed_attempts: 5  #Max failed attempts before triggering an alert
+    suspicious_ports:
+        - 22    # SSH
+        - 3389  # RDP
+        - 445   # SMB
+    max_connections: 50  #Max connections per IP per minute
