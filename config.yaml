@@ -1,18 +1,17 @@
-
----
-
-```yaml
 logging:
-    level: INFO  #Logging level (INFO, DEBUG, ERROR)
-    file_path: logs/threat_detector.log  # Path to store logs
+    level: INFO
+    file_path: logs/threat_detector.log
 
 database:
-    path: security.db  #SQLite database file path
+    path: security.db
 
 thresholds:
-    max_failed_attempts: 5  #Max failed attempts before triggering an alert
+    max_failed_attempts: 5
     suspicious_ports:
-        - 22    # SSH
-        - 3389  # RDP
-        - 445   # SMB
-    max_connections: 50  #Max connections per IP per minute
+        - 22
+        - 3389
+        - 445
+    max_connections: 50
+
+threat_intelligence:
+    api_url: https://threatintel.example.com
