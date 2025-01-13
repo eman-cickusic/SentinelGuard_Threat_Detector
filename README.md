@@ -1,91 +1,132 @@
 # 🛡️ SentinelGuard - Network Security Monitoring System
 
-SentinelGuard is a comprehensive network security monitoring solution developed in Python that provides real-time threat detection and analysis. The system demonstrates advanced capabilities in network security, Python development, and system architecture.
+---
+
+# Overview
+The Enhanced Threat Detector is a Python-based project designed to analyze network traffic, detect potential threats, and log network activity. It uses Scapy for packet inspection, SQLite for data storage, and YAML for configuration management. This modular project is split into three main components:
+
+1. **Core functionality (`basic_threat_detector.py`)**: Implements packet analysis and threat detection.
+2. **Configuration file (`config.yaml`)**: Stores customizable settings.
+3. **Main entry point (`main.py`)**: Initializes the detector and starts monitoring.
 
 ---
 
-## Features
-- Real-time network traffic monitoring and packet inspection
-- Flexible configuration system using YAML
-- Robust logging and alerting system
-- SQLite database for efficient storage and analysis
-- Detection mechanisms for suspicious activities
-- Configurable security thresholds
+# Setup Instructions
+
+## Prerequisites
+1. Ensure Python 3.7 or later is installed on your system.
+2. Install required Python libraries using the provided `requirements.txt` file:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   **Contents of `requirements.txt`:**
+   ```text
+   scapy==2.5.0
+   pyyaml==6.0.1
+   requests==2.31.0
+   ```
+
+## Directory Structure
+Ensure your project directory has the following structure:
+```
+project_directory/
+├── basic_threat_detector.py
+├── config.yaml
+├── main.py
+├── logs/ (create manually, if not present)
+└── requirements.txt
+```
 
 ---
 
-## Technical Architecture
-
-The system implements several key components:
-
-- Packet inspection and analysis using Scapy
-- YAML-based configuration management
-- Comprehensive logging system for security incidents
-- SQLite database for traffic pattern analysis
-- Custom detection mechanisms for security threats
-
----
-
-## Configurable Thresholds
-
-SentinelGuard allows customization of various security parameters:
-
-- Connection rate monitoring
-- Suspicious port detection
-- Failed access attempts tracking
-- Custom alert generation rules
-
----
-
-## Technologies Used
-
-🔹 Python
-🔹 Scapy
-🔹 SQLite
-🔹 YAML
-🔹 Logging
-
----
-
-## Key Capabilities
-
-- Design and implementation of security monitoring solutions
-- Network protocol analysis and packet inspection
-- Maintainable and scalable Python application architecture
-- Efficient data storage and retrieval systems
-- Configurable and extensible security tooling
-
----
-
-## Installation 
-
-# Clone the repository
-git clone [repository-url]
-
-# Install required dependencies
-pip install -r requirements.txt
-
----
-
-## Usage
-
-# Run with default configuration
-python main.py
-
-# Run with custom configuration file
-python main.py -c custom_config.yaml
-
----
+# Usage Instructions
 
 ## Configuration
+Edit the `config.yaml` file to customize the detector's behavior. Key sections include:
+- **Logging**: Specify the log file path and logging level (e.g., `INFO`, `DEBUG`).
+- **Database**: Define the SQLite database file path.
+- **Thresholds**: Set thresholds for suspicious activity, such as maximum failed attempts and connection limits.
+- **Threat Intelligence**: Configure the API URL for fetching threat intelligence data.
 
-The system can be configured through the config.yaml file, allowing customization of:
+Example `config.yaml` file:
+```yaml
+logging:
+    level: INFO
+    file_path: logs/threat_detector.log
 
-- Logging settings
-- Database configuration
-- Security thresholds
-- Alert parameters
+database:
+    path: security.db
+
+thresholds:
+    max_failed_attempts: 5
+    suspicious_ports:
+        - 22
+        - 3389
+        - 445
+    max_connections: 50
+
+threat_intelligence:
+    api_url: https://threatintel.example.com
+```
+
+## Running the Project
+To start the Enhanced Threat Detector, execute the `main.py` file:
+```bash
+python main.py
+```
+This will:
+- Load configurations from `config.yaml`.
+- Initialize the detector.
+- Start monitoring network traffic.
+
+Press **Ctrl+C** to stop the detector.
 
 ---
 
-This project taught me to handle real-world challenges like error handling, resource cleanup, and modular programming.
+# Functionality Details
+
+## Core Features
+1. **Packet Analysis**:
+   - Inspects packets for IP, TCP, UDP, and DNS protocols.
+   - Logs network traffic to the SQLite database.
+
+2. **Threat Detection**:
+   - Identifies suspicious ports based on predefined thresholds.
+   - Detects high connection rates per IP.
+   - Alerts for DNS and HTTP anomalies.
+
+3. **Alert Logging**:
+   - Generates alerts for detected threats.
+   - Stores alert details in the SQLite database.
+
+4. **Logging**:
+   - Logs all activities to a file for auditing.
+
+## Modular Components
+- **`basic_threat_detector.py`**: Core detection logic.
+- **`config.yaml`**: Customizable settings.
+- **`main.py`**: Entry point for starting the program.
+
+---
+
+# Example Workflow
+1. Update `config.yaml` with your desired thresholds and log settings.
+2. Run `python main.py` to start monitoring.
+3. Check `logs/threat_detector.log` for runtime logs.
+4. Review `security.db` for traffic logs and alerts.
+
+---
+
+# Troubleshooting
+
+1. **Missing Logs**:
+   - Ensure the `logs/` directory exists and is writable.
+
+2. **Database Errors**:
+   - Verify the database path in `config.yaml` is correct.
+
+3. **Missing Dependencies**:
+   - Run `pip install -r requirements.txt` to reinstall dependencies.
+
+---
+
