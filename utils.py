@@ -22,3 +22,4 @@ def get_destination_port(packet):
     elif UDP in packet:
         return packet[UDP].dport
     return None
+
