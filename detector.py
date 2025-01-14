@@ -90,3 +90,4 @@ class ThreatDetector:
         self.logger.info("Shutting down Threat Detection System")
         self.db.save_packets(self.packet_buffer)  # Save any remaining packets
         self.db.close()
+
