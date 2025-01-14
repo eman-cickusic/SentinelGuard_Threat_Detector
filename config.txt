@@ -12,3 +12,4 @@ thresholds:
         - 3389  # RDP
         - 445   # SMB
     max_connections: 50
+
