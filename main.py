@@ -7,3 +7,4 @@ if __name__ == "__main__":
 
     detector = ThreatDetector(config)
     detector.start_monitoring()
+
