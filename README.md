@@ -33,6 +33,12 @@ mkdir -p logs
 sudo python main.py  # sudo required for packet capture
 ```
 
+
+
+https://github.com/user-attachments/assets/6c1f2e7f-a891-42cb-ac8e-4a0ef39dcbb4
+
+
+
 ## Configuration
 
 Edit `config/config.yaml` to modify:
