@@ -2,6 +2,7 @@ logging:
     level: INFO
     file_path: logs/threat_detector.log
 
+
 database:
     path: threat_detection.db
 
