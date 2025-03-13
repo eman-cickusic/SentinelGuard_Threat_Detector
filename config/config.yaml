@@ -11,5 +11,5 @@ thresholds:
     suspicious_ports:
         - 22    # SSH
         - 3389  # RDP
-        - 445   # SMB
+        - 445   # SMB 
     max_connections: 50
