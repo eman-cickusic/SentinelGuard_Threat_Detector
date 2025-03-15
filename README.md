@@ -8,7 +8,7 @@
 - Detection of suspicious port access 
 - Basic connection flood detection
 - Packet logging and alert generation
-- Configuration-based setup
+- Configuration-based setup 
 
 ## Setup
 
