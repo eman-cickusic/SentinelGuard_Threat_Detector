@@ -11,7 +11,7 @@ class Database:
         self.cursor.executescript('''
             CREATE TABLE IF NOT EXISTS traffic_logs (
                 id INTEGER PRIMARY KEY,
-                timestamp TEXT,
+                timestamp TEXT, 
                 source_ip TEXT,
                 destination_ip TEXT,
                 source_port INTEGER,
