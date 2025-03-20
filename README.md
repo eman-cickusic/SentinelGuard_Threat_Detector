@@ -55,7 +55,7 @@ Edit `config/config.yaml` to modify:
   - `database.py`: Database operations
   - `utils.py`: Utility functions
 - `logs/`: Log files
-- `main.py`: Application entry point
+- `main.py`: Application entry point 
 
 ## 🚨 Note 🚨
 
