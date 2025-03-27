@@ -57,7 +57,7 @@ Edit `config/config.yaml` to modify:
 - `logs/`: Log files
 - `main.py`: Application entry point 
 
-## 🚨 Note 🚨
+## 🚨 Note 🚨 
 
 This is a basic implementation intended for learning purposes. For production use, additional security measures and optimizations would be needed.
 
