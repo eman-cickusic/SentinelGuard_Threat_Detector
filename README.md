@@ -28,7 +28,7 @@ pip install -r requirements.txt
 mkdir -p logs
 ```
 
-4. Run the detector:
+4. Run the detector: 
 ```bash
 sudo python main.py  # sudo required for packet capture
 ```
