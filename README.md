@@ -54,7 +54,7 @@ Edit `config/config.yaml` to modify:
   - `detector.py`: Main threat detection logic
   - `database.py`: Database operations
   - `utils.py`: Utility functions
-- `logs/`: Log files
+- `logs/`: Log files 
 - `main.py`: Application entry point 
 
 ## 🚨 Note 🚨 
