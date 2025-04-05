@@ -10,7 +10,7 @@ def get_protocol(packet):
     return 'OTHER'
 
 def get_source_port(packet):
-    if TCP in packet:
+    if TCP in packet: 
         return packet[TCP].sport
     elif UDP in packet:
         return packet[UDP].sport
