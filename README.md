@@ -49,7 +49,7 @@ Edit `config/config.yaml` to modify:
 
 ## Project Structure
 
-- `config/`: Configuration files
+- `config/`: Configuration files 
 - `src/`: Source code
   - `detector.py`: Main threat detection logic
   - `database.py`: Database operations 
