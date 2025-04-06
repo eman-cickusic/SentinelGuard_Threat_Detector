@@ -23,7 +23,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt 
 ```
 
-3. Create required directories:
+3. Create required directories: 
 ```bash
 mkdir -p logs
 ```
