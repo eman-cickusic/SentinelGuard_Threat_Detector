@@ -53,7 +53,7 @@ Edit `config/config.yaml` to modify:
 - `src/`: Source code
   - `detector.py`: Main threat detection logic
   - `database.py`: Database operations 
-  - `utils.py`: Utility functions
+  - `utils.py`: Utility functions 
 - `logs/`: Log files   
 - `main.py`: Application entry point 
 
