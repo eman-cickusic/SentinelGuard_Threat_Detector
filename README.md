@@ -14,7 +14,7 @@
 
 1. Create a Python virtual environment:  
 ```bash
-python -m venv venv
+python -m venv venv 
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
 
