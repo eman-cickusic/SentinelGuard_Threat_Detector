@@ -7,7 +7,7 @@
 - Real-time network packet monitoring
 - Detection of suspicious port access 
 - Basic connection flood detection
-- Packet logging and alert generation
+- Packet logging and alert generation 
 - Configuration-based setup  
 
 ## Setup    
