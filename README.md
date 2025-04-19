@@ -10,7 +10,7 @@
 - Packet logging and alert generation 
 - Configuration-based setup  
 
-## Setup    
+## Setup     
 
 1. Create a Python virtual environment:  
 ```bash
