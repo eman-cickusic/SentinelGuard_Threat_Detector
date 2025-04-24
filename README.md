@@ -13,7 +13,7 @@
 ## Setup       
 
 1. Create a Python virtual environment:   
-```bash
+```bash 
 python -m venv venv 
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
